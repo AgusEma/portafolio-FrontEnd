@@ -5,8 +5,9 @@
 }*/
 
 :root {
-  --text-color: #000;
-  --bg-header: #f5f5f5;
+  --text-color: #00ADB5;
+  --bg-header: #222831;
+  --bg-title: #393E46;
   --text-font: 'Raleway', sans-serif;
 }
 
@@ -18,10 +19,6 @@ body {
   margin: 0;
   /* padding-top: 50px; */
   font-family: var(--text-font);
-}
-
-.bg-blue {
-  background-color: navy;
 }
 
 .text-font {
@@ -36,31 +33,42 @@ body {
   font-size: 1.250em;
 }
 
-.inline-block {
+/* .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
-}
-
-.padding-left-rigth-5 {
-  padding: 0 5px;
-}
-
-.padding-left-rigth-10 {
-  padding: 0 10px;
-}
+} */
 
 header {
   background-color: var(--bg-header);
   width: 100%;
-  height: 50px;
+  height: 4rem;
   padding: .25rem;
   position: sticky;
     /* top: -0.15rem;  /* "Efecto" cabecera */
   top: 0;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.logo img {
+  width: auto;
+  height: 3.5rem;
+}
+
+.nav,
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .nav a {
@@ -69,12 +77,14 @@ header {
   color: var(--text-color);
   /*transition: .5s all ease 0s; /*Esto es del :hover*/
   transition: all 0.3s ease-out;
+  margin: 0 .50rem;
 }
 
-.iconos > a{
+.icons a{
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.5em;
+  margin: 0 .50rem;
 }
 
 .boton-login {
@@ -82,9 +92,9 @@ header {
 }
 
 .banner {
-  background-image: url(img/banner.jpg);
+  background-image: linear-gradient(115deg, rgb(34, 40, 49, 0.8), rgb(57, 62, 70, 0.7)), 
+  url(img/banner.jpg);
   background-size: cover;
-  
   background-repeat: no-repeat;
   background-position: center top;
   height: 100vh;
@@ -110,7 +120,8 @@ header {
 }
 
 .slide-title {
-  background-color: palegreen;
+  background-color: var(--bg-title);
+  color: var(--text-color);
   padding: 16px;
   text-align: center;
   /* position: sticky; */
@@ -118,7 +129,7 @@ header {
 }
 
 [id] {
-  scroll-margin-top: 4.8ex;
+  scroll-margin-top: 7.6ex;
 }
 
 .slide-content {
@@ -126,10 +137,10 @@ header {
 }
 /*Hace falta aplicarle cambios, NO hace lo que quiero. (Dejar al final :hover)*/
 .nav a:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #00ADB5;
 }
 
 /*Pensar que podemos aplicarle*/
 .boton-login:hover {
-  background-color: greenyellow;
+  background-color: #00ADB5;
 }
