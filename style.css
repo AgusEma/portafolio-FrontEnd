@@ -92,6 +92,63 @@ header {
   transition: all .5s ease;
 }
 
+/*Enlace que abre la ventana MODAL, en caso de ser necesario borrar SE PUEDE HACER y NO afectar a estilos del boton*/
+.boton-login a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all .5s ease;
+}
+
+/*VENTANA MODAL*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0008;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container {
+  position: relative;
+  border: thick double #1E2345;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 60%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #222831;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  line-height: 3rem;
+  color: var(--text-color);
+  transition: all .5s ease;
+}
+
 .banner {
   background-image: linear-gradient(115deg, rgb(34, 40, 49, 0.8), rgb(57, 62, 70, 0.7)), 
   url(img/banner.jpg);
@@ -294,6 +351,16 @@ header {
   border-color: var(--hover-color);
   color: var(--hover-color);
   cursor: pointer;
+}
+
+/*Enlace que abre la ventana MODAL, en caso de ser necesario borrar SE PUEDE HACER y NO afectar a estilos del boton*/
+.boton-login a:hover {
+  color: var(--hover-color);
+}
+
+.modal-close:hover {
+  color: var(--hover-color);
+  /* cursor: pointer; */
 }
 
 .icons a:hover {
